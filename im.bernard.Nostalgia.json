@@ -1,17 +1,13 @@
 {
     "app-id" : "im.bernard.Nostalgia",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.30",
+    "runtime-version" : "3.34",
     "sdk" : "org.gnome.Sdk",
     "command" : "nostalgia",
     "finish-args" : [
         "--share=ipc",
         "--socket=x11",
-        "--socket=wayland",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--socket=wayland"
     ],
     "cleanup" : [
         "/lib"
@@ -25,6 +21,10 @@
                     "type" : "archive",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia/-/archive/0.3/nostalgia-0.3.tar.gz",
                     "sha256" : "833656c96d68d5067344a3ac107f5355794af11946e84b1d7a0f7b77cff3d3e0"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata_release.patch"
                 }
             ]
         }
