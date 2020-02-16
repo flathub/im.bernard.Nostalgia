@@ -21,10 +21,6 @@
                     "type" : "archive",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia/-/archive/0.4/nostalgia-0.4.tar.gz",
                     "sha256" : "044be070bac4c620a8a71e347605a4c78b6095c720157f72814117109188b95f"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata_release.patch"
                 }
             ]
         }
