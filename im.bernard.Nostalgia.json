@@ -22,7 +22,6 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "archive",
                     "tag" : "0.5",
                     "commit" : "d344a6e7c9bc71aaf2b1c512a0dd5ae99d1dd041"
                 }
