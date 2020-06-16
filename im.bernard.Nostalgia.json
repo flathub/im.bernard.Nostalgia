@@ -23,8 +23,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/bertob/nostalgia/-/archive/0.4/nostalgia-0.4.tar.gz",
-                    "sha256" : "044be070bac4c620a8a71e347605a4c78b6095c720157f72814117109188b95f"
+                    "url" : "https://gitlab.gnome.org/bertob/nostalgia/-/archive/0.5/nostalgia-0.5.tar.gz",
+                    "sha256" : "ff8e63abfcbc68aa27c6a9bcbcc84d184975cf235abf2aff40de5341cbc96a7e"
                 }
             ]
         }
