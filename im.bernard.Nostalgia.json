@@ -40,7 +40,7 @@
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
                     "tag" : "0.6",
-                    "commit" : "983aebc91b442775906e616777213a064e3592e9"
+                    "commit" : "1cf93239ce5c9d2bb04a510b24864a267be02d82"
                 }
             ]
         }
