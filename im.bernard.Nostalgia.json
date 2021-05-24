@@ -1,33 +1,25 @@
 {
     "app-id" : "im.bernard.Nostalgia",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.36",
+    "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
     "command" : "nostalgia",
     "finish-args" : [
         "--share=ipc",
-        "--socket=x11",
-        "--socket=wayland",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--socket=fallback-x11",
+        "--socket=wayland"
     ],
     "modules" : [
         {
-            "name" : "libhandy",
+            "name" : "libportal",
             "buildsystem" : "meson",
             "config-opts" : [
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dglade_catalog=disabled"
+                "-Dgtk_doc=false"
             ],
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libhandy.git",
-                    "tag" : "1.0.2",
-                    "commit" : "465c00f8f80c27330be494ed7c0ba2ffe26321c4"
+                    "url" : "https://github.com/flatpak/libportal.git"
                 }
             ]
         },
@@ -38,8 +30,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
-                    "tag" : "0.6",
-                    "commit" : "1cf93239ce5c9d2bb04a510b24864a267be02d82"
+                    "tag" : "0.7",
+                    "commit" : "01a812b2785354274ceb41358d122d061728c70d"
                 }
             ]
         }
