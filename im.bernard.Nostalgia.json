@@ -19,7 +19,9 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/flatpak/libportal.git"
+                    "url" : "https://github.com/flatpak/libportal.git",
+                    "tag" : "0.4",
+                    "commit" : "f68764e288ede516d902b131cc4fadded3804059"
                 }
             ]
         },
@@ -30,8 +32,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
-                    "tag" : "0.7",
-                    "commit" : "01a812b2785354274ceb41358d122d061728c70d"
+                    "tag" : "0.8",
+                    "commit" : "7a9fd744aca349ec29b3ee86fd63c5d260e3dd35"
                 }
             ]
         }
