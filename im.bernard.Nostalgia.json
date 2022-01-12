@@ -17,7 +17,7 @@
                 "-Dgtk_doc=false",
                 "-Ddemos=false",
                 "-Dbuild-tests=false",
-                "-Dbuild-examples=false",
+                "-Dbuild-examples=false"
             ],
             "sources": [{
                 "type": "git",
