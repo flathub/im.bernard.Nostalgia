@@ -1,7 +1,7 @@
 {
     "app-id" : "im.bernard.Nostalgia",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
     "command" : "nostalgia",
     "finish-args" : [
@@ -10,6 +10,45 @@
         "--socket=wayland"
     ],
     "modules" : [
+        {
+            "name": "libsass",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "url": "https://github.com/lazka/libsass.git",
+                "branch": "meson"
+            }]
+        },
+        {
+            "name": "sassc",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "url": "https://github.com/lazka/sassc.git",
+                "branch": "meson"
+            }]
+        },
+        {
+            "name": "libadwaita",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dintrospection=disabled",
+                "-Dgtk_doc=false",
+                "-Dtests=false",
+                "-Dexamples=false",
+                "-Dvapi=false"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [{
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
+                "tag": "1.0.1",
+                "commit": "b274a0c32c51a92692e3b282f04e88f033ba73b1"
+            }]
+        },
         {
             "name" : "libportal",
             "buildsystem" : "meson",
@@ -32,8 +71,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
-                    "tag" : "0.8",
-                    "commit" : "7a9fd744aca349ec29b3ee86fd63c5d260e3dd35"
+                    "tag" : "0.9",
+                    "commit" : "402fe35f559a2046e841edc174181231abf6badf"
                 }
             ]
         }
