@@ -11,6 +11,20 @@
     ],
     "modules" : [
         {
+            "name" : "pango",
+            "buildsystem": "meson",
+            "config-opts" : [
+                "-Dintrospection=disabled"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://gitlab.gnome.org/GNOME/pango/-/archive/1.50.3/pango-1.50.3.tar.gz",
+                    "sha256" : "4a8b0cf33d5f9ecaa9cd99dd72703d5c4c53bc58df64dd9538493bb4356ab691"
+                }
+            ]
+        },
+        {
             "name": "gtk",
             "buildsystem": "meson",
             "config-opts": [
