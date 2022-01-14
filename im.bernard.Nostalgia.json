@@ -83,6 +83,7 @@
             "buildsystem" : "meson",
             "config-opts" : [
                 "-Dgtk_doc=false"
+                "-Dbackends=gtk4"
             ],
             "sources" : [
                 {
