@@ -47,7 +47,6 @@
             "buildsystem": "meson",
             "config-opts": [
                 "-Dgtk_doc=false",
-                "-Ddemos=false",
                 "-Dbuild-tests=false",
                 "-Dbuild-examples=false"
             ],
