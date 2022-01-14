@@ -88,8 +88,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/flatpak/libportal.git",
-                    "tag" : "0.4",
-                    "commit" : "f68764e288ede516d902b131cc4fadded3804059"
+                    "tag" : "0.5",
+                    "commit" : "467a397fd7996557f837cdc26ac07c01c62810e5"
                 }
             ]
         },
