@@ -62,7 +62,7 @@
             "config-opts": [
                 "-Dgtk_doc=false",
                 "-Dtests=false",
-                "-Dexamples=false",
+                "-Dexamples=false"
             ],
             "cleanup": [
                 "/include",
