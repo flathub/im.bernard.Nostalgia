@@ -1,7 +1,7 @@
 {
     "app-id" : "im.bernard.Nostalgia",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
     "command" : "nostalgia",
     "finish-args" : [
@@ -11,17 +11,83 @@
     ],
     "modules" : [
         {
+            "name": "libsass",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "url": "https://github.com/lazka/libsass.git",
+                "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
+            }]
+        },
+        {
+            "name": "sassc",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "url": "https://github.com/lazka/sassc.git",
+                "commit": "82803377c33247265d779af034eceb5949e78354"
+            }]
+        },
+        {
+            "name" : "pango",
+            "buildsystem": "meson",
+            "config-opts" : [
+                "-Dintrospection=disabled"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://gitlab.gnome.org/GNOME/pango/-/archive/1.50.3/pango-1.50.3.tar.gz",
+                    "sha256" : "4a8b0cf33d5f9ecaa9cd99dd72703d5c4c53bc58df64dd9538493bb4356ab691"
+                }
+            ]
+        },
+        {
+            "name": "gtk",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbuild-tests=false",
+                "-Dbuild-examples=false"
+            ],
+            "sources": [{
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/gtk.git",
+                "tag": "4.6.0",
+                "commit": "70cb61fb7104c76a15bc6494a10e6ff1d470f6d8"
+            }]
+        },
+        {
+            "name": "libadwaita",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dgtk_doc=false",
+                "-Dtests=false",
+                "-Dexamples=false"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [{
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
+                "tag": "1.0.1",
+                "commit": "b274a0c32c51a92692e3b282f04e88f033ba73b1"
+            }]
+        },
+        {
             "name" : "libportal",
             "buildsystem" : "meson",
             "config-opts" : [
-                "-Dgtk_doc=false"
+                "-Ddocs=false",
+                "-Dbackends=gtk4"
             ],
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://github.com/flatpak/libportal.git",
-                    "tag" : "0.4",
-                    "commit" : "f68764e288ede516d902b131cc4fadded3804059"
+                    "tag" : "0.5",
+                    "commit" : "467a397fd7996557f837cdc26ac07c01c62810e5"
                 }
             ]
         },
@@ -32,8 +98,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
-                    "tag" : "0.8",
-                    "commit" : "7a9fd744aca349ec29b3ee86fd63c5d260e3dd35"
+                    "tag" : "0.9",
+                    "commit" : "402fe35f559a2046e841edc174181231abf6badf"
                 }
             ]
         }
