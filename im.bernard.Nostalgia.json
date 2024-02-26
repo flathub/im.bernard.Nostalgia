@@ -1,7 +1,7 @@
 {
     "id" : "im.bernard.Nostalgia",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "nostalgia",
     "finish-args" : [
@@ -15,14 +15,16 @@
             "name" : "libportal",
             "buildsystem" : "meson",
             "config-opts" : [
+                "-Dbackend-gtk3=disabled",
+                "-Dbackend-gtk4=enabled",
                 "-Ddocs=false",
-                "-Dbackends=gtk4"
+                "-Dtests=false"
             ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/flatpak/libportal/releases/download/0.6/libportal-0.6.tar.xz",
-                    "sha256" : "88a12c3ba71bc31acff7238c280de697d609cebc50830c3766776ec35abc6566"
+                    "url" : "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
+                    "sha256" : "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
                 }
             ]
         },
@@ -33,8 +35,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
-                    "tag" : "0.9",
-                    "commit" : "402fe35f559a2046e841edc174181231abf6badf"
+                    "tag" : "0.10",
+                    "commit" : "7e3943f35b47bcfcf4ddb54fe77d2343312258cc"
                 }
             ]
         }
