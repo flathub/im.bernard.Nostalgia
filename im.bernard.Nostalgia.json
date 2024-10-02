@@ -1,7 +1,7 @@
 {
     "id" : "im.bernard.Nostalgia",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",
     "command" : "nostalgia",
     "finish-args" : [
@@ -22,9 +22,15 @@
             ],
             "sources" : [
                 {
-                    "type" : "archive",
-                    "url" : "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
-                    "sha256" : "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
+                    "type": "archive",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.8.1/libportal-0.8.1.tar.xz",
+                    "sha256": "281e54e4f8561125a65d20658f1462ab932b2b1258c376fed2137718441825ac",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/flatpak/libportal/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".assets[] | select(.name==\"libportal-\" + $version + \".tar.xz\") | .browser_download_url"
+                    }
                 }
             ]
         },
@@ -36,7 +42,13 @@
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
                     "tag" : "0.10",
-                    "commit" : "7e3943f35b47bcfcf4ddb54fe77d2343312258cc"
+                    "commit" : "7e3943f35b47bcfcf4ddb54fe77d2343312258cc",
+                    "x-checker-data": {
+                        "type": "git",
+                        "is-important": true,
+                        "url": "https://gitlab.gnome.org/bertob/nostalgia.git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
                 }
             ]
         }
