@@ -1,30 +1,30 @@
 {
-    "id" : "im.bernard.Nostalgia",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "47",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "nostalgia",
-    "finish-args" : [
+    "id": "im.bernard.Nostalgia",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "47",
+    "sdk": "org.gnome.Sdk",
+    "command": "nostalgia",
+    "finish-args": [
         "--device=dri",
         "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland"
     ],
-    "modules" : [
+    "modules": [
         {
-            "name" : "libportal",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libportal",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dbackend-gtk3=disabled",
                 "-Dbackend-gtk4=enabled",
                 "-Ddocs=false",
                 "-Dtests=false"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.8.1/libportal-0.8.1.tar.xz",
-                    "sha256": "281e54e4f8561125a65d20658f1462ab932b2b1258c376fed2137718441825ac",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz",
+                    "sha256": "de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/flatpak/libportal/releases/latest",
@@ -35,14 +35,14 @@
             ]
         },
         {
-            "name" : "nostalgia",
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "nostalgia",
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/bertob/nostalgia.git",
-                    "tag" : "0.10",
-                    "commit" : "7e3943f35b47bcfcf4ddb54fe77d2343312258cc",
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/bertob/nostalgia.git",
+                    "tag": "0.11",
+                    "commit": "563f2aaf9cf7013986f563b8f65b1e6fb6eeb7f5",
                     "x-checker-data": {
                         "type": "git",
                         "is-important": true,
@@ -54,4 +54,3 @@
         }
     ]
 }
-
